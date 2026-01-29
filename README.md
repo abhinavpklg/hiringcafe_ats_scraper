@@ -16,7 +16,7 @@ This project scrapes job data from Avature career pages using a seed file of kno
 - Resume capability for long-running extractions
 - Outputs both CSV and JSON formats
 
-### Files
+## Files
 **1. Code (2 Python scripts)**
 ```
 phase1_discovery.py — Discovers live Avature career sites and harvests job listings
@@ -138,43 +138,43 @@ SAVE_INTERVAL = 100       # Save progress every N jobs
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                         PHASE 1: DISCOVERY                       │
+│                         PHASE 1: DISCOVERY                      │
 ├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
+│                                                                 │
 │   Urls.txt ──► Parse URLs ──► Extract Site Paths                │
 │                                      │                          │
 │                                      ▼                          │
-│                              Validate Endpoints                  │
+│                              Validate Endpoints                 │
 │                                      │                          │
 │                                      ▼                          │
-│                              Harvest Jobs (/SearchJobs/)         │
+│                              Harvest Jobs (/SearchJobs/)        │
 │                                      │                          │
 │                                      ▼                          │
-│                              Clean & Deduplicate                 │
+│                              Clean & Deduplicate                │
 │                                      │                          │
 │                                      ▼                          │
-│                              discovered_jobs.csv                 │
-│                                                                  │
+│                              discovered_jobs.csv                │
+│                                                                 │
 └─────────────────────────────────────────────────────────────────┘
                                    │
                                    ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                        PHASE 2: EXTRACTION                       │
+│                        PHASE 2: EXTRACTION                      │
 ├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
+│                                                                 │
 │   discovered_jobs.csv ──► Visit Each Job URL                    │
 │                                      │                          │
 │                                      ▼                          │
-│                              Extract Details                     │
-│                              • Description                       │
-│                              • Location                          │
-│                              • Date Posted                       │
-│                              • Department                        │
-│                              • Apply URL                         │
+│                              Extract Details                    │
+│                              • Description                      │
+│                              • Location                         │
+│                              • Date Posted                      │
+│                              • Department                       │
+│                              • Apply URL                        │
 │                                      │                          │
 │                                      ▼                          │
 │                        jobs_full_details.csv/json               │
-│                                                                  │
+│                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 ## Resume Capability
